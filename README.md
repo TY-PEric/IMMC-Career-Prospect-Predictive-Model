@@ -1,6 +1,6 @@
 # Quantitative Evaluation of Emerging Career Trajectories (IMMC)
 
-This repository contains the research paper and modeling framework submitted to the **International Mathematical Modeling Challenge (IMMC)**. The project constructs a multi-criteria decision-making pipeline to evaluate short-term viability and forecast 10-year development trends for 19 newly recognized professions in the Chinese labor market.
+This repository contains the research paper and modeling framework submitted to the **International Mathematical Modeling Challenge (IMMC)** and qualify our team to the international round. The project constructs a multi-criteria decision-making pipeline to evaluate short-term viability and forecast 10-year development trends for 19 newly recognized professions in the Chinese labor market.
 
 ---
 
