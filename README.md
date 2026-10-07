@@ -1,14 +1,14 @@
-# Quantitative Evaluation of Emerging Career Trajectories (IMMC)
+# Emerging Careers: Prospect and Trend Model (IMMC 2025)
 
-This repository contains the research paper and modeling framework submitted to the **International Mathematical Modeling Challenge (IMMC)** and qualify our team to the international round. The project constructs a multi-criteria decision-making pipeline to evaluate short-term viability and forecast 10-year development trends for 19 newly recognized professions in the Chinese labor market.
+This repository contains the research paper and modeling framework for the **International Mathematical Modeling Challenge (IMMC) 2025** qualifying round, which qualified our team for the international round. The model scores the short-term prospects and 10-year development trends of 19 new professions in the Chinese labor market.
 
 ---
 
 ## Project Overview
-In July 2024, China's Ministry of Human Resources and Social Security introduced 19 emerging professions (e.g., Generative AI Specialists, Bioengineering Technicians). Addressing the rising youth unemployment landscape, our objective was to formulate an empirical, data-driven career selection framework for college graduates through three interconnected stages:
+In July 2024, China's Ministry of Human Resources and Social Security introduced 19 emerging professions (e.g., Generative AI Specialists, Bioengineering Technicians). With youth unemployment high, we built a career selection framework for college graduates in three stages:
 1. **Short-Term Career Prospect Model:** Quantifies the immediate market attractiveness across 5 representative careers using objective weighting.
 2. **Long-Term Development Trend Model:** Forecasts 10-year industry viability and AI fungibility across all 19 professions using subjective hierarchical weighting.
-3. **Personalized Career Recommendation System:** Matches individual graduate skills, preferences, and salary thresholds to optimized career paths.
+3. **Personalized Career Recommendation:** A survey (the graduate's top 5 picks among the 19 professions, expected salary, and background) recommends the three best-trending careers that fit.
 
 ---
 
@@ -25,7 +25,7 @@ In July 2024, China's Ministry of Human Resources and Social Security introduced
 ### 2. Hierarchical Weight Allocation (AHP)
 To model macro-level 10-year trends, we constructed a 3-layer Analytic Hierarchy Process (AHP):
 * **Hierarchy:** Evaluated Primary Indicators (Market Supply-Demand, Industry Potential, Industrial Transformation) and corresponding secondary metrics (R&D investment, market size growth, PPP policy subsidies, and replaceability).
-* **Consistency Verification:** Principal eigenvalues and eigenvectors were calculated ($AW = \lambda_{max}W$). The Consistency Ratio satisfied the strict stability threshold ($CR < 0.10$):
+* **Consistency Verification:** Principal eigenvalues and eigenvectors were calculated ($AW = \lambda_{max}W$). Every comparison matrix passed the consistency check ($CR < 0.10$):
   $$CI = \frac{\lambda_{max} - n}{n - 1}, \quad CR = \frac{CI}{RI}$$
 
 ### 3. Multi-Criteria Ranking via TOPSIS
@@ -37,20 +37,22 @@ We implemented the Technique for Order Preference by Similarity to Ideal Solutio
 
 ---
 
-## Core Empirical Findings
+## Results
+
+**Short-term prospects (5 careers):** Cloud Network Intelligent Maintenance Technician scored highest (56.39), followed by Live Streamer (52.55).
 
 ### Top 5 Long-Term Emerging Careers (10-Year Trend Score)
-| Rank | Emerging Profession | TOPSIS Closeness Score ($C_i^+$) | Key Driver |
-| :---: | :--- | :---: | :--- |
-| **1** | **Non-Ferrous Metal Spot Trader** | **60.23** | High R&D support, minimal AI replaceability |
-| **2** | **User Growth Operations Specialist** | **58.51** | Rapid digital platform market expansion |
-| **3** | **Intelligent Manufacturing System Maintenance** | **52.26** | Industrial automation transition baseline |
-| **4** | **Industrial Internet Maintenance Technician** | **50.71** | High infrastructure interconnectedness |
-| **5** | **Cybersecurity Grading & Assessment Specialist**| **46.48** | Rising systemic risk resilience demand |
+| Rank | Emerging Profession | Trend Score (TOPSIS) |
+| :---: | :--- | :---: |
+| **1** | **Non-Ferrous Metal Spot Trader** | **60.23** |
+| **2** | **User Growth Operations Specialist** | **58.51** |
+| **3** | **Intelligent Manufacturing System Maintenance** | **52.26** |
+| **4** | **Industrial Internet Maintenance Technician** | **50.71** |
+| **5** | **Cybersecurity Grading & Assessment Specialist**| **46.48** |
 
-*Notable Outlier:* Exhibition Builder scored lowest (**8.08**) due to constrained market cap growth and low technical barrier.
+The paper attributes the top rank to strong industry potential and a low replaceability score; the next places go to internet-related roles, in line with growing digitalization. Exhibition Builder scored lowest (**8.08**) because of its small market and unfavorable supply-demand balance.
 
 ---
 
 ## Repository Contents
-* `IMMC_Qualify_Paper.pdf`: Full 26-page mathematical modeling paper including raw data tables, AHP comparison matrices, boxplot score distributions, and sensitivity analyses.
+* `IMMC_Qualify_Paper.pdf`: the full paper, with data tables, AHP comparison matrices, score distributions, and sensitivity analyses.
