@@ -1,6 +1,6 @@
 # Emerging Careers: Prospect and Trend Model (IMMC 2025)
 
-This repository contains the research paper and modeling framework for the **International Mathematical Modeling Challenge (IMMC) 2025** qualifying round, which qualified our team for the international round. The model scores the short-term prospects and 10-year development trends of 19 new professions in the Chinese labor market.
+This repository contains the research paper and modeling framework for the **International Mathematical Modeling Challenge (IMMC) 2025, Regional Contest of Greater China**, where it won **Finalist (特等入围奖)**, the second-highest award, and qualified our team for the International Contest of Greater China. The model scores the short-term prospects and 10-year development trends of 19 new professions in the Chinese labor market.
 
 ---
 
